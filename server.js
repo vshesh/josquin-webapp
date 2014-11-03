@@ -27,7 +27,10 @@ app.use(express.methodOverride());
 app.use(express.cookieParser('Intro HCI secret key'));
 app.use(express.session());
 app.use(app.router);
-app.use(express.static(path.join(__dirname, 'app')));
+app.configure(function() {
+  app.use('/lib', express.static(path.join(__dirname, 'app/lib')));
+  app.use(express.static(path.join(__dirname, 'app')));
+})
 app.use(partials());
 
 // development only
