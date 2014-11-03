@@ -22,15 +22,11 @@ app.set('view engine', 'handlebars');
 app.use(express.favicon());
 app.use(express.logger('dev'));
 app.use(express.json());
+app.use(express.static(path.join(__dirname, 'app')));
 app.use(express.urlencoded());
-app.use(express.methodOverride());
 app.use(express.cookieParser('Intro HCI secret key'));
 app.use(express.session());
 app.use(app.router);
-app.configure(function() {
-  app.use('/lib', express.static(path.join(__dirname, 'app/lib')));
-  app.use(express.static(path.join(__dirname, 'app')));
-})
 app.use(partials());
 
 // development only
