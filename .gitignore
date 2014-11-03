@@ -41,4 +41,3 @@ Thumbs.db
 *~ #temp files created by programs
 humdata/ # don't need the humdata - craig already has a repo for that stuff.
 node_modules
-app/lib
