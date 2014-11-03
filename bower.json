@@ -1,0 +1,12 @@
+{
+  "name": "josquinccarh-viz",
+  "private": "true",
+  "directory": "www/app/lib",
+  "dependencies": {
+    "angular": "latest",
+    "angular-route": "latest",
+    "d3" : "latest",
+    "underscore": "latest",
+    "angular-dsv": "latest"
+  }
+}

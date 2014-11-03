@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Kernel Density Estimation</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <script type="text/javascript" src="lib/d3/d3.min.js"></script>
+    <script type="text/javascript" src="lib/science.v1.min.js"></script>
+    <script src="lib/underscore/underscore-min.js"></script>
+    <script src="lib/angular/angular.min.js"></script>
+    <script type="text/javascript" src="js/kde.js"></script>
+  </head>
+  <body ng-app="josquin-dataviz" class="holy-grail" ng-controller="DistributionsCtrl">
+    <div class="holy-grail-content">
+      <div forcegraph adjacencylist="{{adjacencies}}"
+           selectednodes="selectednodes" radius="nodeSize(nid)"></div>
+    </div>
+    <div class="holy-grail-right">
+      <div smoothhistogram originaldata="{{originaldata}}" selecteddata="{{selecteddata}}"></div>
+      <div featurehistogram></div>
+    </div>
+  </body>
+</html>
+
+

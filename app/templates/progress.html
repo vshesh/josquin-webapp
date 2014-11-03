@@ -1,0 +1,21 @@
+<div class="ks-container">
+  <h5>Progress for Vishesh Gupta</h5>
+  <h2>graph goes here</h2>
+  <div class="row">
+    <!-- Previous Acts of Kindness -->
+    <div class="col"> 
+      <h5>Completed Acts!</h5>
+        <ul class="list" ng-scroll-viewport style="height: 400px;">
+          <li class="item" ng-scroll="act in previousacts">{{act.name}}</li>
+        </ul>
+    </div>
+    <!-- Suggestions for Acts of Kindness -->
+    <div class="col">
+      <h5> Suggestions for You </h5>
+        <ul class="list" ng-scroll-viewport style="height: 400px;"> 
+          <li class="item" ng-scroll="act in suggestedacts">{{act.name}}</li>
+        </ul>
+    </div>
+  </div>
+</div>
+
