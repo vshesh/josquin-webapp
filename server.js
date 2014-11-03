@@ -2,6 +2,7 @@
 /**
  * Module dependencies.
  */
+process.env.PWD = process.cwd()
 
 var express = require('express');
 var partials = require('express-partials');
@@ -17,7 +18,7 @@ var app = express();
 // all environments
 app.set('port', process.env.PORT || 3000);
 app.set('views', path.join(__dirname, 'views'));
-app.use(express.static(path.join(__dirname, 'app')));
+app.use(express.static(path.join(process.env.PWD, 'app')));
 app.engine('handlebars', handlebars());
 app.set('view engine', 'handlebars');
 app.use(express.favicon());
